@@ -93,6 +93,7 @@ app.get("/", function(request, response){
 app.get("/:id", function(request, response){
   if (getID(data,request.params.id)){
   response.json(getID(data,request.params.id));
+  response.status = 200;
   }
   else {
     response.status = 404;

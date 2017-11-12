@@ -41,6 +41,7 @@ app.get("/data", function(request, response){
 app.get("/data/:id", function(request, response){
   if (getID(request.params.id) == true){
     response.json(getID(data,request.params.id));
+    response.status = 200;
   }
   else {
     response.status = 404;
