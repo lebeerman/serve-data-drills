@@ -33,13 +33,14 @@ function getID(array, id) {
       return array[i];
     }
   }
+  return false;
 }
 
-app.get("/data", function(request, response){
+app.get("/", function(request, response){
   response.json(data);
 })
-app.get("/data/:id", function(request, response){
-  if (getID(request.params.id) == true){
+app.get("/:id", function(request, response){
+  if (getID(data,request.params.id)){
     response.json(getID(data,request.params.id));
     response.status = 200;
   }
