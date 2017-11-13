@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-
+const app = express();
+app.use(cors());
+app.set('port', (process.env.PORT || 3000));
 const data = [{
       id: 1,
       cohortName: "17-01-WD-DP",
@@ -23,10 +25,6 @@ const data = [{
       numberOfStudents: "29"
     }
 ];
-
-const app = express();
-app.use(cors());
-
 function getID(array, id) {
   for (var i = 0; i < array.length; i++) {
     if (array[i].id == id){
@@ -35,7 +33,6 @@ function getID(array, id) {
   }
   return false;
 }
-
 app.get("/", function(request, response){
   response.json(data);
 })
@@ -53,8 +50,6 @@ app.get("/:id", function(request, response){
       });
   }
 })
-
-
-
-
-app.listen(3000, console.log("RUNNING WITH SCISSORS!!!"));
+app.listen(app.get('port'), function() {
+  console.log('Node app v1 is running on port', app.get('port'));
+});
