@@ -53,6 +53,6 @@ app.get("/:id", function(request, response){
       });
   }
 })
-app.listen('port', function() {
+app.listen(app.get('port'), function() {
   console.log('Node app v1 is running on port', app.get('port'));
 });
