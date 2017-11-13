@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(cors());
-app.set('port', (process.env.PORT || 3000));
+app.set('port', 3000);
 const data = [{
       id: 1,
       cohortName: "17-01-WD-DP",
@@ -50,6 +50,6 @@ app.get("/:id", function(request, response){
       });
   }
 })
-app.listen(app.get('port'), function() {
+app.listen(3000, function() {
   console.log('Node app v1 is running on port', app.get('port'));
 });

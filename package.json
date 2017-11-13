@@ -3,9 +3,13 @@
   "description": "pushing cohort info",
   "main": "app.js",
   "author": "Daniel Beerman",
+  "engines": {
+    "node": "6.11.1"
+  },
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "cors": "^2.8.4",
