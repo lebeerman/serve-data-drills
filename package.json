@@ -1,23 +1,23 @@
 {
-  "name": "cohort-info",
-  "description": "pushing cohort info",
-  "main": "app.js",
-  "author": "Daniel Beerman",
+  "name": "v1",
+  "version": "1.0.0",
+  "description": "pushing express drill v1",
   "engines": {
-    "node": "6.11.1"
+    "node": "8.7.0"
   },
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "cors": "^2.8.4",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "node": "^9.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
   },
-  "version": "1.0.0",
   "license": "ISC"
 }
