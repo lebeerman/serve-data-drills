@@ -2,7 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 app.use(cors());
-app.set('port', 3000);
+
+app.set('port', (process.env.PORT || 3000));
+
 const data = [{
       id: 1,
       cohortName: "17-01-WD-DP",
