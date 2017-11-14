@@ -34,11 +34,15 @@ function getID(array, id) {
   return false;
 }
 app.get('/', function(request, response){
-  response.json(data);
+  response.json({
+    data
+  });
 });
 app.get('/:id', function(request, response){
   if (getID(data,request.params.id)){
-    response.json(getID(data,request.params.id));
+    response.json({
+      getID(data,request.params.id)
+    });
     response.status(200);
   }
   else {
