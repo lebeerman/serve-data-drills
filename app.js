@@ -28,7 +28,9 @@ const data = [{
 function getID(array, id) {
   for (var i = 0; i < array.length; i++) {
     if (array[i].id == id){
-      return array[i];
+      var dataItem = {};
+      dataItem.data = array[i];
+      return (dataItem);
     }
   }
   return false;
@@ -40,9 +42,7 @@ app.get('/', function(request, response){
 });
 app.get('/:id', function(request, response){
   if (getID(data,request.params.id)){
-    response.json({
-      getID(data,request.params.id)
-    });
+    response.json(getID(data,request.params.id));
     response.status(200);
   }
   else {
